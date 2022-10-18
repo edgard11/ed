@@ -4,6 +4,7 @@
 }
 body{
     background-image: linear-gradient(90deg, #b800f5, #ff0019);
+    background-repeat: no-repeat;
 }
                  /*pannel*/
 .pannel{
