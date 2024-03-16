@@ -1,17 +1,22 @@
-var circle = document.getElementById("rotate");
-var upBtn = document.getElementById("btnUp");
-var downBtn = document.getElementById("bntDown");
+let yes = document.getElementById("yes");
+let no = document.getElementById("no");
+// offsetTop:363
+// offsetLeft:180
 
-var rotateValue = circle.style.transform;
-var rotateSum;
+let px = "px";
+let X = Math.floor(Math.random() * 300);
+let Y = Math.floor(Math.random() * 250);
+no.addEventListener("click", () => {
+  no.style.position = "absolute";
+  if (X <= 210) no.style.left = X + px;
+  else no.style.left - X - 90 + px;
+  if (Y <= 220) no.style.top = Y + px;
+  else no.style.left - Y - 30 + px;
 
-upBtn.onclick = function(){
-    rotateSum = rotateValue + "rotate(90deg)";
-    circle.style.transform = rotateSum;
-    rotateValue = rotateSum;
-}
-downBtn.onclick = function(){
-    rotateSum = rotateValue + "rotate(-90deg)";
-    circle.style.transform = rotateSum;
-    rotateValue = rotateSum;
-}
+  X = Math.floor(Math.random() * 300);
+  Y = Math.floor(Math.random() * 250);
+});
+
+yes.addEventListener("click", () => {
+  alert("oh Thank you! and 'I Love You to' ❤️😘");
+});
